@@ -23,7 +23,7 @@ This project demonstrates the integration of Spring Boot with Keycloak, a popula
 **Configure Keycloak:** Set up a Keycloak instance and define a realm, client, and user roles.<br>
 **Configure Spring Boot:** Update the Spring Boot application properties to specify the Keycloak realm, client ID, and issuer URI.<br>
 **Run Application:** Start the Spring Boot application and verify the integration with Keycloak.<br>
-**Explore Endpoints:** Access the secured endpoints of the RESTful API and observe the Keycloak authentication process.
+**Explore Endpoints:** Access the secured endpoints of the RESTful API and observe the Keycloak authentication & authorization process.
 
 ---
 **Contributing:**

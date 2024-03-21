@@ -2,6 +2,7 @@ package com.example.keycloakresourceserver;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -12,6 +13,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Configuration
 @EnableWebSecurity
+@EnableMethodSecurity
 public class SecurityConfiguration {
 
     private final JwtAuthConverter jwtAuthConverter;
@@ -24,6 +26,7 @@ public class SecurityConfiguration {
                     authorize.requestMatchers("/v1/articles/minified").permitAll();
                     authorize.requestMatchers("/v1/articles/create").hasRole("ADMIN");
                     authorize.requestMatchers("/v1/articles/all").hasAnyRole("USER", "ADMIN");
+                    authorize.requestMatchers("/v1/articles/**").permitAll();
                     authorize.anyRequest().authenticated();
                 })
                 .oauth2ResourceServer(oauth2 -> oauth2

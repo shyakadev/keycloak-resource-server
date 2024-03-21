@@ -21,6 +21,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.apache.commons:commons-collections4:4.4'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'com.c4-soft.springaddons:spring-addons-oauth2-test:7.1.10'
 	compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok'

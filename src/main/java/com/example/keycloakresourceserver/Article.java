@@ -10,13 +10,13 @@ import lombok.Data;
 public class Article {
 
   public Article() {
-      this.createdAt = Instant.now();
+    this.createdAt = Instant.now();
   }
 
   public Article(String title, String content) {
-      this.title = title;
-      this.content = content;
-      this.createdAt = Instant.now();
+    this.title = title;
+    this.content = content;
+    this.createdAt = Instant.now();
   }
 
   @Id

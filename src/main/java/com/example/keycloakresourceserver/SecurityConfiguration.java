@@ -21,9 +21,9 @@ public class SecurityConfiguration {
         http.csrf(csrf -> csrf.disable())
             .cors(cors -> cors.disable())
                 .authorizeHttpRequests((authorize) -> {
-                    authorize.requestMatchers("/articles/minified").permitAll();
-                    authorize.requestMatchers("/articles/create").hasRole("ADMIN");
-                    authorize.requestMatchers("/articles/all").hasAnyRole("USER", "ADMIN");
+                    authorize.requestMatchers("/v1/articles/minified").permitAll();
+                    authorize.requestMatchers("/v1/articles/create").hasRole("ADMIN");
+                    authorize.requestMatchers("/v1/articles/all").hasAnyRole("USER", "ADMIN");
                     authorize.anyRequest().authenticated();
                 })
                 .oauth2ResourceServer(oauth2 -> oauth2

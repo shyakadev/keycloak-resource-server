@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/shyakadev/keycloak-resource-server/actions/workflows/ci.yml/badge.svg)](https://github.com/shyakadev/keycloak-resource-server/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/shyakadev/keycloak-resource-server)
 <br>
 This project demonstrates the integration of Spring Boot with Keycloak, a popular open-source Identity and Access Management (IAM) solution, using Gradle as the build tool. The project showcases how to secure a Spring Boot RESTful API as a resource server using Keycloak for authentication and authorization (**Route** and **Method** based).
 
